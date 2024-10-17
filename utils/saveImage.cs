@@ -10,10 +10,10 @@ namespace OCR.utils
 
         public saveImage(MemoryStream image, string filePath)
         {
-            //if (Image == null || Image.Length == 0)
-            //{
-            //    throw new ArgumentException("A imagem está nula ou está corrompida.", nameof(Image));
-            //}
+            if (image == null || image.Length == 0)
+            {
+                throw new ArgumentException("A imagem está nula ou está corrompida.", nameof(Image));
+            }
 
             Image = image;
             FilePath = filePath;
