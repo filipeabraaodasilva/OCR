@@ -13,5 +13,6 @@ for (int i = 0; i < paginas.Count; i++)
 {
     MemoryStream imagem = paginas[i];
     saveImage salvar = new saveImage(image: imagem,
-                                     filePath: $@"{tempPath}\pagina_{i + 1}.jpg");
+                                     folder: tempPath,
+                                     fileName: $"pagina_{i + 1}");
 }
