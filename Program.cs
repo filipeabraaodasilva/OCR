@@ -1,8 +1,12 @@
 ﻿using OCR.pdf;
 using OCR.utils;
+using DotNetEnv;
+
+DotNetEnv.Env.Load(@"D:\Aplicações\c#\OCR\.env");
+string GOOGLE_API_KEY = Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
 
 string pathOfDocument = @"D:\arquivos\documento.pdf";
-string tempPath = @"D:\arquivos";
+string tempPath = @"D:\arquivos\temp";
 
 toImage arquivo = new toImage(caminhoDoArquivo: pathOfDocument);
 arquivo.ConvertToJPEG();
