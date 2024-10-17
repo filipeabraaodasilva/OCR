@@ -3,7 +3,6 @@ using System.IO;
 using PdfiumViewer;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Collections.Generic;
 
 #pragma warning disable CA1416
 namespace OCR.pdf
