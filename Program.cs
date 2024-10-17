@@ -3,6 +3,7 @@ using OCR.utils;
 
 string pathOfDocument = @"D:\arquivos\documento.pdf";
 string tempPath = @"D:\arquivos";
+
 toImage arquivo = new toImage(caminhoDoArquivo: pathOfDocument);
 
 arquivo.ConvertToJPEG();
@@ -14,6 +15,3 @@ for (int i = 0; i < paginas.Count; i++)
     saveImage salvar = new saveImage(image: imagem,
                                      filePath: $@"{tempPath}\pagina_{i + 1}.jpg");
 }
-
-//Console.WriteLine($"O caminho do arquivo é: {arquivo.getFilePath()}\n" +
-//                  $"O arquivo possui: {arquivo.getNumberOfPages()}");

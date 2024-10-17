@@ -23,6 +23,7 @@ namespace OCR.pdf
             CaminhoDoArquivo = caminhoDoArquivo;
             ImagensEmMemoria = new List<MemoryStream>();
         }
+
         public void ConvertToJPEG()
         {
             using (var documento = PdfDocument.Load(CaminhoDoArquivo))
@@ -38,6 +39,7 @@ namespace OCR.pdf
                 }
             }
         }
+
         private Bitmap RenderizarPagina(PdfDocument documento, int numeroPagina)
         {
             const int dpi = 300;
@@ -65,14 +67,17 @@ namespace OCR.pdf
 
             return imagem;
         }
+
         public string getFilePath()
         {
             return CaminhoDoArquivo;
         }
+
         public List<MemoryStream> getImages()
         {
             return ImagensEmMemoria;
         }
+
         public int getNumberOfPages()
         {
             PdfDocument documento = PdfDocument.Load(CaminhoDoArquivo);
