@@ -1,6 +1,5 @@
 ﻿using OCR.pdf;
 using OCR.utils;
-using DotNetEnv;
 
 DotNetEnv.Env.Load(@"D:\Aplicações\c#\OCR\.env");
 string GOOGLE_API_KEY = Environment.GetEnvironmentVariable("GOOGLE_API_KEY");
