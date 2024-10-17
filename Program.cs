@@ -5,7 +5,6 @@ string pathOfDocument = @"D:\arquivos\documento.pdf";
 string tempPath = @"D:\arquivos";
 
 toImage arquivo = new toImage(caminhoDoArquivo: pathOfDocument);
-
 arquivo.ConvertToJPEG();
 List<MemoryStream> paginas = arquivo.getImages();
 
